@@ -3,6 +3,7 @@ import { AppSidebar } from "@/components/AppSidebar";
 import { Bell, LogOut, User, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,7 +35,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
             
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon" className="relative">
+              <ThemeToggle />
+              <Button variant="ghost" size="icon" className="relative text-foreground hover:bg-accent">
                 <Bell className="h-5 w-5" />
                 <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full text-xs flex items-center justify-center text-primary-foreground">
                   3
@@ -43,7 +45,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-2 px-2">
+                  <Button variant="ghost" className="flex items-center gap-2 px-2 text-foreground hover:bg-accent">
                     <Avatar className="h-8 w-8">
                       <AvatarImage src="/placeholder.svg" />
                       <AvatarFallback className="bg-primary text-primary-foreground">
@@ -51,7 +53,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                       </AvatarFallback>
                     </Avatar>
                     <div className="text-left hidden sm:block">
-                      <p className="text-sm font-medium">João Silva</p>
+                      <p className="text-sm font-medium text-foreground">João Silva</p>
                       <p className="text-xs text-muted-foreground">Afiliado Premium</p>
                     </div>
                   </Button>
