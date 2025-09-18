@@ -11,6 +11,7 @@ import Achievements from "./pages/Achievements";
 import Suporte from "./pages/Suporte";
 import MeusDados from "./pages/MeusDados";
 import MeuGerente from "./pages/MeuGerente";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import { DashboardLayout } from "./layouts/DashboardLayout";
 
@@ -23,6 +24,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
           <Route path="/marketplace" element={<DashboardLayout><Marketplace /></DashboardLayout>} />
           <Route path="/solicitacoes" element={<DashboardLayout><Solicitacoes /></DashboardLayout>} />
