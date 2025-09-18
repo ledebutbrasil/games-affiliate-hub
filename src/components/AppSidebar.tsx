@@ -73,11 +73,12 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild className="mb-1">
                     <NavLink
                       to={item.url}
+                      end
                       className={({ isActive }) =>
                         `flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${
                           isActive
                             ? "bg-emerald-500 text-black font-medium shadow-lg"
-                            : "text-emerald-500 hover:bg-emerald-500/10 hover:text-emerald-600"
+                            : "text-emerald-500 dark:text-white hover:bg-emerald-500/10 hover:text-emerald-600 dark:hover:text-emerald-400"
                         }`
                       }
                     >
